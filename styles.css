@@ -89,7 +89,9 @@ body {
 }
 
 .stars {
-  margin: 12px 0;
+  /* margin: 12px 0; */
+  width: 50%;   /* Shrinks the image to 50% of its original size */
+  height: auto; /* Maintains the aspect ratio */
 }
 
 .sub {
@@ -131,4 +133,9 @@ body {
   grid-row: 4;
   background: hsl(256, 67%, 59%);
   color: white;
+}
+
+#growth {
+  max-width: 100%; /* Image can shrink, but not grow beyond its original size */
+  height: auto;
 }
