@@ -3,40 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
   <title>Frontend Mentor | Bento grid</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- Feel free to remove these styles or customise in your own stylesheet
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style>-->
+
 </head>
+
 <body>
+  <main class="page">
+    <section class="bento">
 
-  Social Media 10x Faster with AI
-  Over 4,000 5-star reviews
+      <div class="card" id="create">
+        <p>Create and schedule content <span>quicker.</span></p>
+        <button>Create Post</button>
+      </div>
 
-  Manage multiple accounts and platforms.
+      <div class="card" id="write">
+        <p>Write your content using AI.</p>
+      </div>
 
-  Maintain a consistent posting schedule.
+      <div class="card" id="social">
+        <h1>Social Media <span>10x</span><br>Faster with AI</h1>
+        <p class="stars">★★★★★</p>
+        <p class="sub">Over 4,000 5-star reviews</p>
+      </div>
 
-  Schedule to social media.
-  Optimize post timings to publish content at the perfect time for your audience.
-  
-  Grow followers with non-stop content.
+      <div class="card" id="manage">
+        <p>Manage multiple accounts and platforms.</p>
+      </div>
 
-  >56% faster audience growth
-  
-  Create and schedule content quicker.
+      <div class="card" id="maintain">
+        <p>Maintain a consistent posting schedule.</p>
+      </div>
 
-  Write your content using AI.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <div class="card" id="schedule">
+        <h2>Schedule to social media.</h2>
+	<img src="./assets/images/illustration-schedule-posts.webp" alt="">
+        <p>Optimize post timings to publish content at the perfect time for your audience.</p>
+      </div>
+
+      <div class="card" id="faster">
+        <h2>&gt;56%</h2>
+        <p>faster audience growth</p>
+      </div>
+
+      <div class="card" id="grow">
+        <h2>Grow followers with non-stop content.</h2>
+      </div>
+
+    </section>
+  </main>
 </body>
 </html>
