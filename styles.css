@@ -1,4 +1,4 @@
-/* RESET */
+
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +32,7 @@ body {
 
   justify-content: center;
 
-  /* 1 narrow + 3 equal columns*/
+  /* based on my Figma layout 1 narrow + 3 equal columns*/
   grid-template-columns: 253px 255px 255px 255px;
 
   /* base height unit*/
@@ -43,21 +43,13 @@ body {
 
 /* SHARED CARD STYLES */
 .card {
-  border-radius: 16px;
+  border-radius: 10px;
   padding: 24px;
   font-size: 18px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
-/* trying something here 
-.text {
-  font-size: 30px;
-  font-weight:600;
-  line-height: 1;
-  margin-bottom: 20px;
-} */
 
 .card p{
   font-size: 30px;
@@ -66,14 +58,6 @@ body {
   margin-bottom: 20px;
 }
 
-
-/*
-.card img {
-  max-width: 100%;
-  max-height: 65%;
-  object-fit: contain;
-}
-  */
 
 /* LEFT COLUMN */
 #create {
@@ -86,13 +70,24 @@ body {
   color: hsl(256, 67%, 59%);
 }
 
+
+#create p { 
+  line-height: 1;
+  font-weight: lighter;
+  font-weight: bold;
+}
+
+#create  p span {
+  font-style: italic;
+}
+
 #write {
-  grid-column: 1;
+  grid-column: 1 / 1;
   grid-row: 3 / 5;
   background: hsl(39, 100%, 71%);
 }
 
-/* CENTER HERO */
+/* CENTER COLUMN */
 #social {
   grid-column: 2 / 4;
   grid-row: 1 / 3;
@@ -122,8 +117,7 @@ body {
 .stars {
   width: 180px;      /* shrink proportionally */
   height: auto;      /* keep aspect ratio */
-  display: inline-block; /* respects text-align: center on parent */
-  /*margin: 12px 0;    optional vertical spacing */
+  /*display: inline-block;  respects text-align: center on parent */
   margin-top: 24px;
   margin-bottom: 10px;
   max-width: 50%;
@@ -134,23 +128,13 @@ body {
    font-size: smaller;
    font-weight: lighter;
 }
-/*
-.stars {
-  margin: 12px 0;
-}
-*/
-/*
-.sub {
-  opacity: 0.9;
-}
-*/
+
 /* CENTER SMALL CARDS */
 #manage {
-  grid-column: 2;
-  grid-row: 3;
+  grid-column: 2 / 2;
+  grid-row: 3 / 3;
   background: white;
-
-    overflow: hidden;
+  overflow: hidden;
 }
 
 #manage p{
@@ -162,48 +146,112 @@ body {
 margin-top: 15px;
 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 border-radius: 24px;
+  width: 100%;          /* increase size */
+  max-width: none;      /* prevent shrinking */
+  height: auto;
+  object-fit: contain;
+  margin-left: auto;    /* pushes image fully to the right */
+  margin-right: 0;
+  margin-top: 15px;
+  position: relative;   /* enable offset */
+  right: -50px;         /*keep right edge aligned */
 }
 
 
 #maintain {
-  grid-column: 3;
-  grid-row: 3;
+  grid-column: 3 / 3;
+  grid-row: 3 / 3;
   background: hsl(39, 100%, 71%);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 0;
+    position: relative;  /* Needed to clip child with overflow */
+    overflow: hidden;    /* Prevent image spilling outside vertically */
+    height: 160px;       /* Match grid row height or set your desired height */
 }
 
+#maintain p{
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 5px;
+  text-align: left;
+  margin-top: 50px;
+
+} 
+
 #maintain img{
+  /*
   max-width: 100%;
   max-height: 70%;
   margin-bottom: 0;
   object-fit: contain;
-  margin-top: auto;   /* pushes image downward */
-  
+  margin-top: auto;   pushes image downward */
+  /*max-width: none;     /* Allow image to grow beyond container width */
+  width: 150%;         /* Increase image size */
+  /*max-height: 100%;*/
+  height: 100%;
+
+   /*position: relative;  /* Needed to clip child with overflow */
+  /*overflow: hidden;    /* Prevent image spilling outside vertically */
+  /*height: 160px;*/ 
+  top:20px;
+   object-fit: contain;
+   margin-top: 10px;
 }
 
 
 
 /* RIGHT COLUMN */
 #schedule {
-  grid-column: 4;
+  grid-column: 4 / 4;
   grid-row: 1 / 4;
   background: hsl(254, 88%, 90%);
+  /*padding: 30px 0 30px 15px;*/
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+  padding: 50px 25px 50px 25px;
+  overflow:hidden;
 }
 
 #schedule img {
-  width: 110%;
+  /*width: 110%;
   height: 100%;
   margin-bottom: 0;
   object-fit: contain;
-  margin-right: auto;   /* pushes image downward */
+  margin-right: auto;   /*pushes image downward */ 
+  width: 150%;          /* increase size */
+  max-width: none;      /* prevent shrinking */
+  height: auto;
+  object-fit: contain;
+  margin-left: auto;    /* pushes image fully to the right */
+  margin-right: 0;
+  margin-top: 15px;
+  position: relative;   /* enable offset */
+  /*right: 0;              keep right edge aligned */
+  right: 0px;
 }
 
+
+#schedule h2{
+  line-height: .9;
+  font-weight: bold;
+}
+
+#schedule p{ 
+  opacity: 0.6;
+  font-size: smaller;
+  font-weight:bold;
+  margin-top: 15px;
+}
+
+
 #faster {
-  grid-column: 2;
-  grid-row: 4;
+  grid-column: 2 / 2;
+  grid-row: 4 / 4;
   background: white;
 }
 
@@ -225,19 +273,31 @@ border-radius: 24px;
   font-weight:500;
 }
 
+
 #grow {
   grid-column: 3 / 5;
-  grid-row: 4;
+  grid-row: 4 / 4;
   background: hsl(256, 67%, 59%);
   color: white;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  /*align-items: flex-start;*/
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+  padding: 15px;
 }
+
 
 .growth {
     max-width: 100%;
     max-height: 100%;
     height: auto;
     object-fit: contain;
+}
+
+#grow h2{
+  line-height: .8;
+  font-weight: normal;
+  font-size: 36px;
 }
