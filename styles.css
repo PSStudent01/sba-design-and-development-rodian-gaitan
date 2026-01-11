@@ -301,3 +301,39 @@ border-radius: 24px;
   font-weight: normal;
   font-size: 36px;
 }
+
+/*RESPONSIVENESS FO RSMALLER SIZE SCREENS*/
+
+@media (max-width: 768px){
+  .card p{
+    font-size: 18px;
+  }
+   
+  #social h1 {
+    font-size: 36px;
+   }
+
+  #schedule h2{
+    font-size: 24px;
+  }
+
+   #grow h2{
+    font-size: 24px;
+  }
+}
+
+/* FROM EXTERNAL SOURCES - TO ENSURE GRID LAYOUT COLLAPSES ON MOBILE DEVICES*/
+@media (max-width: 768px) {
+  .bento {
+    display: grid;                  /* still a grid */
+    grid-template-columns: 1fr;     /* single column */
+    grid-template-rows: auto;       /* let rows grow naturally */
+    gap: 16px;                      /* smaller gap for mobile */
+  }
+
+  .card {
+    width: 100%;                    /* full width of column */
+    padding: 16px;                   /* smaller padding for mobile */
+    font-size: 18px;                 /* adjust paragraph size for readability */
+  }
+}
