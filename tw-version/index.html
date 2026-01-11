@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Frontend Mentor | Bento Grid</title>
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans">
+  <main class="min-h-screen flex justify-center items-center">
+    <section class="grid max-w-[1440px] w-full gap-6
+                    grid-cols-[253px_255px_255px_255px]
+                    grid-rows-[160px_160px_160px_160px]">
+
+      <!-- CREATE CARD -->
+      <div class="bg-yellow-100 rounded-xl p-6 flex flex-col justify-center col-start-1 col-end-2 row-start-1 row-end-3">
+        <p class="text-2xl font-bold leading-none">
+          Create and schedule content <span class="text-purple-500 italic">quicker.</span>
+        </p>
+        <img src="./assets/images/illustration-create-post.webp" 
+             alt="image of a yellow button with the text 'Create Post'" 
+             class="mt-4">
+      </div>
+
+      <!-- WRITE CARD -->
+      <div class="bg-yellow-400 rounded-xl p-6 flex flex-col justify-center col-start-1 col-end-2 row-start-3 row-end-5">
+        <p class="text-2xl font-bold leading-none">
+          Write your content using AI.
+        </p>
+        <img src="./assets/images/illustration-ai-content.webp" 
+             alt="cartoon-like image with an up arrow pointing to the avatar of a smiling girl"
+             class="mt-4">
+      </div>
+
+      <!-- SOCIAL CARD -->
+      <div class="bg-purple-500 text-white rounded-xl p-6 flex flex-col items-center justify-center col-start-2 col-end-4 row-start-1 row-end-3 text-center">
+        <h1 class="text-5xl font-light leading-none">
+          Social Media <span class="text-yellow-400">10x</span><br>
+          <span class="italic">Faster</span> with AI
+        </h1>
+        <img src="./assets/images/illustration-five-stars.webp" 
+             alt="cartoon-like image of 5 yellow stars" 
+             class="w-44 mt-6 mb-2">
+        <p class="text-sm opacity-60">Over 4,000 5-star reviews</p>
+      </div>
+
+      <!-- MANAGE CARD -->
+      <div class="bg-white rounded-xl p-6 flex flex-col justify-center overflow-hidden col-start-2 col-end-3 row-start-3 row-end-4">
+        <img src="./assets/images/illustration-multiple-platforms.webp" 
+             alt="cartoon-like image of 2 social-media icons" 
+             class="mt-4 shadow-lg rounded-2xl w-full object-contain relative -right-12">
+        <p class="text-lg mt-5">Manage multiple accounts and platforms.</p>
+      </div>
+
+      <!-- MAINTAIN CARD -->
+      <div class="bg-yellow-400 rounded-xl p-6 flex flex-col items-center overflow-hidden h-40 relative col-start-3 col-end-4 row-start-3 row-end-4">
+        <p class="text-xl mt-12 text-left mb-1">Maintain a consistent posting schedule.</p>
+        <img src="./assets/images/illustration-consistent-schedule.webp" 
+             alt="cartoon-like image of a calendar with August 2024 displayed"
+             class="w-[150%] h-full object-contain relative top-5 mt-2">
+      </div>
+
+      <!-- SCHEDULE CARD -->
+      <div class="bg-purple-200 rounded-xl p-12 flex flex-col items-center gap-2 overflow-hidden col-start-4 col-end-5 row-start-1 row-end-4">
+        <h2 class="text-2xl font-bold leading-snug">Schedule to social media.</h2>
+        <img src="./assets/images/illustration-schedule-posts.webp" 
+             alt="cartoon-like image of a purple bargraph graphic"
+             class="w-[150%] h-auto mt-4 relative">
+        <p class="text-sm font-bold opacity-60 mt-4 text-center">
+          Optimize post timings to publish content at the perfect time for your audience.
+        </p>
+      </div>
+
+      <!-- FASTER CARD -->
+      <div class="bg-white rounded-xl p-6 flex flex-col justify-center items-start col-start-2 col-end-3 row-start-4 row-end-5">
+        <h2 class="text-4xl font-medium">&gt;56%</h2>
+        <p class="text-sm font-light leading-4 mt-1">faster audience growth</p>
+        <img src="./assets/images/illustration-audience-growth.webp" 
+             alt="cartoon-like image of audience growth with 3 funny avatars"
+             class="w-3/5 h-3/5 mt-2">
+      </div>
+
+      <!-- GROW CARD -->
+      <div class="bg-purple-500 text-white rounded-xl p-4 flex items-center gap-2 col-start-3 col-end-5 row-start-4 row-end-5">
+        <img src="./assets/images/illustration-grow-followers.webp" 
+             alt="cartoon-like image providing total count of followers" 
+             class="max-w-full max-h-full object-contain">
+        <h2 class="text-2xl font-normal leading-tight">Grow followers with non-stop content.</h2>
+      </div>
+
+    </section>
+  </main>
+</body>
+
+</html>
