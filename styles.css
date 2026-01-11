@@ -337,3 +337,35 @@ border-radius: 24px;
     font-size: 18px;                 /* adjust paragraph size for readability */
   }
 }
+
+/* ////////////////////////// potential fix to mobile responsiveness ////////////////////////////////////*/
+
+@media (max-width: 768px) {
+  .bento {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+  .bento > * {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    position: static !important;
+  }
+
+  #grow {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #maintain {
+    height: auto;
+  }
+}
+
